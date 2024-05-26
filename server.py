@@ -25,14 +25,14 @@ def start_server(host='0.0.0.0', port=33000):
     while True:
         client_socket, client_address = server_socket.accept()
         print(f"Connection from {client_address}")
-        
+
         data = client_socket.recv(4096).decode()
         fizz_buzz_list = ast.literal_eval(data)
-        
+
         if check_fizz_buzz(fizz_buzz_list):
-            response = "Correct FizzBuzz"
+            response = "Correct! Here's your flag: flag{c0d3_wh1z_f1zzbuzz}"
         else:
-            response = "Incorrect FizzBuzz"
+            response = f"Sorry, that's not correct.\n{fizz_buzz_list}"
 
         client_socket.send(response.encode())
         client_socket.close()
