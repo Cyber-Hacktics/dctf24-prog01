@@ -4,11 +4,11 @@ import ast
 def check_fizz_buzz(fizz_buzz_list):
     for i, value in enumerate(fizz_buzz_list, start=1):
         if i % 3 == 0 and i % 5 == 0:
-            expected_value = "DEADFACE"
+            expected_value = "TURBOTACTICAL"
         elif i % 3 == 0:
-            expected_value = "DEAD"
-        elif i % 5 == 0:
-            expected_value = "FACE"
+            expected_value = "TURBO"
+        elif i % 7 == 0:
+            expected_value = "TACTICAL"
         else:
             expected_value = i
 

@@ -4,11 +4,11 @@ def generate_fizz_buzz(n):
     fizz_buzz_list = []
     for i in range(1, n + 1):
         if i % 3 == 0 and i % 5 == 0:
-            fizz_buzz_list.append("DEADFACE")
+            fizz_buzz_list.append("TURBOTACTICAL")
         elif i % 3 == 0:
-            fizz_buzz_list.append("DEAD")
-        elif i % 5 == 0:
-            fizz_buzz_list.append("FACE")
+            fizz_buzz_list.append("TURBO")
+        elif i % 7 == 0:
+            fizz_buzz_list.append("TACTICAL")
         else:
             fizz_buzz_list.append(i)
     return fizz_buzz_list
