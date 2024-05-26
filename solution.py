@@ -3,7 +3,7 @@ import socket
 def generate_fizz_buzz(n):
     fizz_buzz_list = []
     for i in range(1, n + 1):
-        if i % 3 == 0 and i % 5 == 0:
+        if i % 3 == 0 and i % 7 == 0:
             fizz_buzz_list.append("TURBOTACTICAL")
         elif i % 3 == 0:
             fizz_buzz_list.append("TURBO")
@@ -26,5 +26,5 @@ def send_fizz_buzz(fizz_buzz_list, host='localhost', port=33000):
     client_socket.close()
 
 if __name__ == "__main__":
-    fizz_buzz_list = generate_fizz_buzz(100)  # You can adjust the range as needed
+    fizz_buzz_list = generate_fizz_buzz(500)  # You can adjust the range as needed
     send_fizz_buzz(fizz_buzz_list)
